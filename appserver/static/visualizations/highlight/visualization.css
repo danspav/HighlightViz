@@ -1,0 +1,78 @@
+/*
+ * CSS rules for visualization.
+ * Class namespacing is good practice.
+ */
+
+div.highlight_line{display:block;}
+div.highlight_line.highlight{}
+table.highlight_table tr.odd td{background-color:#f1f1f1;}
+
+div.highlight_scroll{
+	overflow-y:scroll;
+	height: 100%;
+	overflow-x:hidden;
+	width: -webkit-fill-available
+	
+	}
+
+
+
+div.highlightTable {
+  	display: table;
+	border-collapse:collapse;
+	font-family:Splunk Platform Mono,Inconsolata,Consolas,Droid Sans Mono,Monaco,Courier New,Courier,monospace;
+	font-size: 14px;
+	width: -webkit-fill-available
+	}
+div.highlightTR {
+  	display: table-row;
+	border-collapse:collapse;
+}
+
+div.highlightTR.odd{
+	background-color:#f1f1f1;
+}
+div.highlightTBODY{
+	overflow-y:scroll;
+	max-height: 450px;
+	display: table-row-group;
+}
+
+div.highlightTD, div.highlightTH {
+	border-collapse:collapse;
+  	display: table-cell;
+  	text-align: left;
+    vertical-align: top;
+    padding: 6px 12px;
+    line-height: 20px;
+	border: 1px solid #999999;
+	
+	overflow-wrap: break-word;
+ 	word-wrap: break-word;
+ 	-ms-word-break: break-all;
+ 	 /* This is the dangerous one in WebKit, as it breaks things wherever */
+ 	word-break: break-all;
+	  /* Instead use this non-standard one: */
+ 	word-break: break-word;
+	 /* Adds a hyphen where the word breaks, if supported (No Blink) */
+ 	-ms-hyphens: auto;
+ 	-moz-hyphens: auto;
+ 	-webkit-hyphens: auto;
+ 	hyphens: auto;
+ 	
+
+}
+
+
+
+div.highlightTH{
+	height:20px;
+	background-color:rgb(225, 230, 235);
+	color:rgb(60, 68, 77);
+	line-height:20px;
+	vertical-align:bottom;
+	white-space:normal;
+	-webkit-border-horizontal-spacing:0px;
+	-webkit-border-vertical-spacing:0px;
+}
+

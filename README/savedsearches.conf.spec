@@ -1,0 +1,24 @@
+# Declare properties here
+default.visualizations.custom.highlight.highlight.colour1 = <string>
+default.visualizations.custom.highlight.highlight.colour2 = <string>
+default.visualizations.custom.highlight.highlight.colour3 = <string>
+default.visualizations.custom.highlight.highlight.colour4 = <string>
+default.visualizations.custom.highlight.highlight.colour5 = <string>
+default.visualizations.custom.highlight.highlight.colour6 = <string>
+default.visualizations.custom.highlight.highlight.colour7 = <string>
+default.visualizations.custom.highlight.highlight.colour8 = <string>
+default.visualizations.custom.highlight.highlight.colour9 = <string>
+default.visualizations.custom.highlight.highlight.colour10 = <string>
+default.visualizations.custom.highlight.highlight.keyWord1 = <string>
+default.visualizations.custom.highlight.highlight.keyWord2 = <string>
+default.visualizations.custom.highlight.highlight.keyWord3 = <string>
+default.visualizations.custom.highlight.highlight.keyWord4 = <string>
+default.visualizations.custom.highlight.highlight.keyWord5 = <string>
+default.visualizations.custom.highlight.highlight.keyWord6 = <string>
+default.visualizations.custom.highlight.highlight.keyWord7= <string>
+default.visualizations.custom.highlight.highlight.keyWord8 = <string>
+default.visualizations.custom.highlight.highlight.keyWord9 = <string>
+default.visualizations.custom.highlight.highlight.keyWord10 = <string>
+default.visualizations.custom.highlight.highlight.activeColumns = <string>
+default.visualizations.custom.highlight.highlight.noMatchRows = <integer>
+default.visualizations.custom.highlight.highlight.exceptions = <string>

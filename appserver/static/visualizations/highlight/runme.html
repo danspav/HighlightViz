@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+table.highlight_table{
+border: 1px solid black;
+cellspacing:2px;
+border-collapse:collapse;
+width:100%;
+}
+table.highlight_table td{ border:1px solid black; vertical-align: text-top;
+text-align: left;
+    vertical-align: top;
+    padding: 6px 12px;
+    line-height: 20px;
+	font-family:Splunk Platform Mono,Inconsolata,Consolas,Droid Sans Mono,Monaco,Courier New,Courier,monospace;
+}
+
+table.highlight_table th{
+background-color:rgb(225, 230, 235);
+border: 1px solid rgb(60, 68, 77);
+border-collapse:collapse;
+box-shadow:none;
+color:rgb(60, 68, 77);
+display:table-cell;
+font-family:"Splunk Platform Sans", "Proxima Nova", Roboto, Droid, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:14px;
+font-weight:400;
+height:20px;
+line-height:20px;
+padding:6px 12px 6px 12px;
+position:relative;
+text-align:left;
+text-size-adjust:100%;
+vertical-align:bottom;
+white-space:normal;
+-webkit-border-horizontal-spacing:0px;
+-webkit-border-vertical-spacing:0px;
+}
+
+span.highlight_line{display:block;}
+span.highlight_line.highlight{}
+table.highlight_table tr.odd td{background-color:#f1f1f1;}
+</style>
+</head>
+<body>
+
+<div id="highlight_table"></div>
+
+<script src="jquery.min.js"></script>
+<script src="highlight.js"></script>
+<script>
+data= {
+     fields: [
+          { name: '_time' },
+          { name: '_raw' },
+      ],
+      rows: [
+          ["7/06/18 0:39:11:405 EST", "[7/06/18 0:39:11:405 EST] 00000077 BaseSOAPInbou 3 [TID: 0A747A2C:0163D5898C22:EDAA:624D1D5E] com.telstra.osst.mediator.core.ejb.BaseSOAPInboundBean onMessage <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<p:AuditMessage xsi:type=\"p:AuditMessage\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:p=\"http://Med_Lib_Common\">\r\n  <AuditType>REQUEST_INBOUND</AuditType>\r\n  <TransactionId>0A747A2C:0163D5898C22:EDAA:624D1D5E</TransactionId>\r\n  <ServiceProvider>\r\n    <Service>ManageServiceQualification</Service>\r\n    <Operation>ServiceabilityLevel2</Operation>\r\n    <Provider>Mediator</Provider>\r\n  </ServiceProvider>\r\n  <Payload>\r\n    <Type>XML</Type>\r\n    <Message><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<p:ServiceabilityLevel2_._type xsi:type=\"p:ServiceabilityLevel2_._type\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:v1=\"http://www.telstra.com/OCIM/v1\" xmlns:p=\"http://Med_Lib_Service/2007/06/30/interfaces/FeasibilityManagerService\">\r\n  <ServiceabilityLevel2Request>\r\n    <ConsumerApplicationID>CCB-RCRM</ConsumerApplicationID>\r\n    <UserID>d807240</UserID>\r\n    <PropertyAddress>\r\n      <Id>414958680</Id>\r\n    </PropertyAddress>\r\n    <NetworkTelephoneNumber>\r\n      <TelephoneNumber></TelephoneNumber>\r\n    </NetworkTelephoneNumber>\r\n    <ResourceFacingServiceSpecAvailability>\r\n      <v1:ServiceSpecAvailabilityParameterValueForValueOfSpecAvailability>\r\n        <v1:ValueAssignedToParameter>\r\n          <v1:parameter>NBN_Customer_Authority_Date</v1:parameter>\r\n        </v1:ValueAssignedToParameter>\r\n      </v1:ServiceSpecAvailabilityParameterValueForValueOfSpecAvailability>\r\n      <ResourceFacingServiceSpecComposite>\r\n        <CommonName>FOXTEL</CommonName>\r\n        <ServiceSpecDescribedBy>\r\n          <commonName>\r\n</commonName>\r\n          <ServiceSpecCharacteristicForServiceSpecTakesOn>\r\n            <CommonName>CONNECTION_TYPE</CommonName>\r\n          </ServiceSpecCharacteristicForServiceSpecTakesOn>\r\n        </ServiceSpecDescribedBy>\r\n      </ResourceFacingServiceSpecComposite>\r\n      <Cable>\r\n        <ObjectID>\r\n</ObjectID>\r\n      </Cable>\r\n      <CustomerCode>2055585352</CustomerCode>\r\n      <ProductOrderItemObjectId>5-1TFRXWSB</ProductOrderItemObjectId>\r\n      <ProductOrderId>5-142444776238</ProductOrderId>\r\n      <PathSelectionOption>\r\n</PathSelectionOption>\r\n      <ProvisionDslWithPstn>N</ProvisionDslWithPstn>\r\n    </ResourceFacingServiceSpecAvailability>\r\n  </ServiceabilityLevel2Request>\r\n</p:ServiceabilityLevel2_._type>\r\n</Message>\r\n  </Payload>\r\n  <Payload>\r\n    <Type>JMSHeader</Type>\r\n    <Header>\r\n      <JMSMessageClass>class com.tibco.tibjms.TibjmsBytesMessage</JMSMessageClass>\r\n      <JMSDeliveryMode>2</JMSDeliveryMode>\r\n      <JMSExpiration>1528297751375</JMSExpiration>\r\n      <JMSPriority>4</JMSPriority>\r\n      <JMSMessageID>ID:EMS-GATEWAY.446E5A56288A1CD399:98508</JMSMessageID>\r\n      <JMSTimestamp>1528295951375</JMSTimestamp>\r\n      <JMSDestination>Queue[Telstra.SMO.ServiceabilityManager.Request]</JMSDestination>\r\n      <JMSReplyTo>Queue[Telstra.SMO.ServiceabilityManager.CCB.Reply]</JMSReplyTo>\r\n      <JMSRedelivered>false</JMSRedelivered>\r\n      <JMS_IBM_PutDate></JMS_IBM_PutDate>\r\n      <JMSXAppID></JMSXAppID>\r\n      <JMS_IBM_PutApplType></JMS_IBM_PutApplType>\r\n      <JMSXUserID></JMSXUserID>\r\n      <JMS_IBM_PutTime></JMS_IBM_PutTime>\r\n      <JMSXDeliveryCount></JMSXDeliveryCount>\r\n      <TAP_contextId></TAP_contextId>\r\n      <Thread_Info>main[MessageListenerThreadPool : 6]</Thread_Info>\r\n    </Header>\r\n  </Payload>\r\n  <Timestamp>Thu Jun 07 00:39:11 EST 2018</Timestamp>\r\n</p:AuditMessage>"],
+          ["7/06/18 0:39:11:826 EST", "[7/06/18 0:39:11:826 EST] 00000077 BaseSOAPInbou 3 [TID: 0A747A2C:0163D5898C22:EDAA:624D1D5E] com.telstra.osst.mediator.core.ejb.BaseSOAPInboundBean sendMessage <?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<p:AuditMessage xsi:type=\"p:AuditMessage\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:p=\"http://Med_Lib_Common\">\r\n  <AuditType>RESPONSE_OUTBOUND</AuditType>\r\n  <TransactionId>0A747A2C:0163D5898C22:EDAA:624D1D5E</TransactionId>\r\n  <ServiceProvider>\r\n    <Service>ManageServiceQualification</Service>\r\n    <Operation>ServiceabilityLevel2</Operation>\r\n    <Provider>Mediator</Provider>\r\n  </ServiceProvider>\r\n  <Payload>\r\n    <Type>XML</Type>\r\n    <Message><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<qu:ServiceabilityLevel2Response xmlns:qu=\"http://telstra.oss.fal/ManageServiceQualification.xsd\">\r\n  <ErrorMessages>\r\n    <ErrorMessageName>MED6401</ErrorMessageName>\r\n    <ErrorMessageText>Could not retrieve detail record</ErrorMessageText>\r\n  </ErrorMessages>\r\n</qu:ServiceabilityLevel2Response></Message>\r\n  </Payload>\r\n  <Payload>\r\n    <Type>JMSHeader</Type>\r\n    <Header>\r\n      <JMSMessageClass>class com.tibco.tibjms.TibjmsBytesMessage</JMSMessageClass>\r\n      <JMSDeliveryMode>2</JMSDeliveryMode>\r\n      <JMSExpiration>0</JMSExpiration>\r\n      <JMSPriority>4</JMSPriority>\r\n      <JMSMessageID>ID:T8101-ULTIMO-EMS-SERVER-1.4DAF5AE2020141C22A:45508</JMSMessageID>\r\n      <JMSTimestamp>1528295951820</JMSTimestamp>\r\n      <JMSCorrelationID>ID:EMS-GATEWAY.446E5A56288A1CD399:98508</JMSCorrelationID>\r\n      <JMSDestination>Queue[Telstra.SMO.ServiceabilityManager.CCB.Reply]</JMSDestination>\r\n      <JMSReplyTo></JMSReplyTo>\r\n      <JMSRedelivered>false</JMSRedelivered>\r\n      <JMS_IBM_PutDate></JMS_IBM_PutDate>\r\n      <JMSXAppID></JMSXAppID>\r\n      <JMS_IBM_PutApplType></JMS_IBM_PutApplType>\r\n      <JMSXUserID></JMSXUserID>\r\n      <JMS_IBM_PutTime></JMS_IBM_PutTime>\r\n      <JMSXDeliveryCount></JMSXDeliveryCount>\r\n      <TAP_contextId></TAP_contextId>\r\n      <Thread_Info>main[MessageListenerThreadPool : 6]</Thread_Info>\r\n    </Header>\r\n  </Payload>\r\n  <Timestamp>Thu Jun 07 00:39:11 EST 2018</Timestamp>\r\n</p:AuditMessage>"]
+      ]
+ }
+
+ oHighlight = new Highlight();
+ oHighlight.addKeyword("error","DodgerBlue");
+ oHighlight.addKeyword("<TransactionId>","orange");
+ oHighlight.addKeyword("[TID:","tomato");
+ oHighlight.addKeyword("<?xml ","pink");
+ oHighlight.addActiveColumn("_raw");
+ 
+ 
+ oHighlight.addData(data);
+
+  document.getElementById("highlight_table").innerHTML=oHighlight.getHTML();
+ 
+</script>
+</html>
